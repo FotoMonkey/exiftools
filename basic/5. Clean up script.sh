@@ -6,7 +6,7 @@ function writeXmp() {
     # Create a new filename with the 'xmp' extension.
     xmp=$(echo "$base.xmp")
     # Create the XMP file.
-    /usr/local/bin/exiftool -tagsfromfile "$1" -@ ~/jexiftoolgui_data/args/iptc2xmp.args -q "$xmp"
+    /usr/local/bin/exiftool -tagsfromfile "$1" -@ ~/jexiftoolgui_data/args/iptc2xmp.args -overwrite_original -P -q "$xmp"
 }
 
 # Create a loop to iterate through all files passed to the script
